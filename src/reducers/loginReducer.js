@@ -1,11 +1,16 @@
-export const loginReducer = (state={}, action) => {
+const initialState={
+  loggedUserName:""
+};
+
+export const loginReducer = (state=initialState, action) => {
     switch (
       action.type 
     ) {
       case 'USER_LOGGED':
-           state.loggedUsername = action.loggedUserName;
-
-        return state;
+        console.warn("odebralem USER_LOGGED w reducerze i zapisuje do state");
+            return {...state, loggedUserName: action.loggedUserName};
+      case 'USER_LOGGED_OUT':
+            return {...state, loggedUserName: ""};
       default:
         return state;
     }

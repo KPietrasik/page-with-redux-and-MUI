@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
     if (loginValue === goodCreditensials.goodLogin 
         && 
         passwordValue === goodCreditensials.goodPassword) {
-            console.warn("zalogowano");
+            console.warn("zalogowano i wysylam akcje");
             this.props.userLogged(loginValue);
     } else {
     this.setState({ error: !this.state.error });
@@ -73,12 +73,16 @@ class LoginForm extends React.Component {
   }
 }
 
+// ta funkcja dostaje stan ze stora
 const mapStateToProps = (state) => {
     console.warn("loginForm: wykryłem zmiany w state")
   return {}
 };
 
-{/* <LoginForm nazwa="3" costam="pietnascie"/> */}
-const mapDispatchToProps= {userLogged};
+
+const mapDispatchToProps = {userLogged};
+
+// const connectLoginForm = connect(mapStateToProps, mapDispatchToProps);
+// export const LoginFromConnected = connectLoginForm(LoginForm);
 
 export const LoginFormConnected = connect(mapStateToProps, mapDispatchToProps)(LoginForm);
