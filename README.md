@@ -1,3 +1,8 @@
+Strona zbudowana w oparciu o biblioteke MUI z wykorzystaniem reduxa. Login: test, hasło: test.
+Dostępna na : http://lineye.pl/
+Wyświetla dane z API. Dyanmiczny filtr wyszukania po imieniu, lub nazwisku. Możliwość ustawienia róznej ilości rekorów. Po kliknięciu otwiera się okno modalne ze szczegółami.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
